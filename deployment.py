@@ -4,12 +4,13 @@ import pandas as pd
 import numpy as np
 from sklearn.pipeline import Pipeline
 import joblib
+from joblib import dump
 
 # Load saved models and transformers
 scale = joblib.load('minmax')
 winsor = joblib.load('winsor')
 imputation = joblib.load('meanimpute')
-rf_model = joblib.load('rfc.pkl')
+dump(rf_model, 'rfc.pkl')
 
 # Function to preprocess input data
 def preprocess_input(data):
