@@ -1,6 +1,6 @@
 streamlit
 pandas
 numpy
-scikit
+scikit-learn
 joblib
 feature-engine
